@@ -1,4 +1,6 @@
 import React from "react"
+
+import ToggleButton from '../SideBar/ToggleButton'
 import './NavBar.css'
 
 class NavBar extends React.Component {
@@ -7,10 +9,13 @@ class NavBar extends React.Component {
             <header className="navbar">
                 <div className="navbar-top"></div>
                 <nav className="navbar-navigation">
-                    <div></div>
-                    <div className="navbar-logo">
-                        <a href="/"><img src="logo.png" alt="logo"></img></a>
+                    <div>
+                        <ToggleButton />
                     </div>
+                    <div className="navbar-logo">
+                        <a href="/">THE LOGO</a>
+                    </div>
+                    <div className="spacer"></div>
                     <div className="navbar-items">
                         <ul>
                             <li><a href="/">About</a></li>
