@@ -37,3 +37,9 @@
 .sidebar a:active {
     color: lightblue;
 }
+
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+}
