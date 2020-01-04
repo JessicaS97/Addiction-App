@@ -2,6 +2,7 @@ import React from "react"
 
 import ToggleButton from '../SideBar/ToggleButton'
 import './NavBar.css'
+import logo from './logo.png'
 
 class NavBar extends React.Component {
     render() {
@@ -12,10 +13,11 @@ class NavBar extends React.Component {
                     <div className="navbar-toggle-button">
                         <ToggleButton click={this.props.clickHandler}/>
                     </div>
-                    <div className="navbar-logo">
-                        <a href="/">THE LOGO</a>
-                    </div>
                     <div className="spacer"></div>
+                    <div className="navbar-logo">
+                        <a href="/"><img src={logo} alt="logo"></img></a>
+                    </div>
+                    <div className="spacer-right"></div>
                     <div className="navbar-items">
                         <ul>
                             <li><a href="/">About</a></li>
