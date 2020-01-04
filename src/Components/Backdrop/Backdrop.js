@@ -5,7 +5,8 @@ import './Backdrop.css'
 class Backdrop extends React.Component {
     render() {
         return(
-            <div className="backdrop"></div>
+        <div className="backdrop" onClick={this.props.click}>
+        </div>
         )
     }
 }

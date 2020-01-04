@@ -10,7 +10,7 @@ class NavBar extends React.Component {
                 <div className="navbar-top"></div>
                 <nav className="navbar-navigation">
                     <div>
-                        <ToggleButton />
+                        <ToggleButton click={this.props.clickHandler}/>
                     </div>
                     <div className="navbar-logo">
                         <a href="/">THE LOGO</a>

@@ -5,7 +5,7 @@ import './ToggleButton.css'
 class ToggleButton extends React.Component {
     render() {
         return(
-            <button className="toggle-button">
+            <button className="toggle-button" onClick={this.props.click}>
                 <div className="toggle-button-line"></div>
                 <div className="toggle-button-line"></div>
                 <div className="toggle-button-line"></div>
