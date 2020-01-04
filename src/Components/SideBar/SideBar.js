@@ -4,8 +4,15 @@ import './SideBar.css'
 
 class SideBar extends React.Component {
     render() {
+
+        let sideClasses = 'sidebar'
+
+        if (this.props.show) {
+            sideClasses = 'sidebar open'
+        }
+
         return(
-            <nav className="sidebar">
+            <nav className={sideClasses}>
                 <ul>
                     <li><a href="/">About</a></li>
                     <li><a href="/">FAQs</a></li>

@@ -1,6 +1,6 @@
 import React from "react"
 import NavBar from './NavBar/NavBar'
-import LandingPage from './LandingPage'
+import LandingPage from './LandingPage/LandingPage'
 import SideBar from './SideBar/SideBar'
 import Backdrop from './Backdrop/Backdrop'
 
@@ -21,17 +21,16 @@ class Header extends React.Component {
     }
 
     render() {
-        let sideBar, backdrop
+        let backdrop
 
         if (this.state.sideBarOpen) {
-          sideBar = <SideBar/ >
           backdrop = <Backdrop click={this.backdropClickHandler}/>
         }
 
         return(
-            <div id="header">
+            <div id="header" style={{height: '100%'}}>
                 <NavBar clickHandler={this.toggleClickHandler}/>
-                {sideBar}
+                <SideBar show={this.state.sideBarOpen}/>
                 {backdrop}
                 <LandingPage />
             </div>
