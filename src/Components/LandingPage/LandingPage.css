@@ -2,4 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.background-img img {
+    display: block;
+    height: 400px;
+}
+
+.landingPage p {
+    font-size: 20px;
+}
+
+.landingPage button {
+    font-size: 15px;
 }
