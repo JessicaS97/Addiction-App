@@ -36,6 +36,16 @@ class Register extends React.Component {
                                 onChange={this.handleChange}
                             />
                         </div>
+                        <div className="email">
+                            <label>Email</label>
+                            <input 
+                                type="text" 
+                                placeholder="Email"
+                                name="email" 
+                                noValidate
+                                onChange={this.handleChange}
+                            />
+                        </div>
                         <div className="password">
                             <label>Password</label>
                             <input 
