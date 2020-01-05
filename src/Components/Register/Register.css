@@ -1,5 +1,14 @@
 .register {
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+}
+
+.register-img img{
+    display: block;
+    height: 400px;
+}
+
+.register-form {
+    margin: 40px 150px;
 }
