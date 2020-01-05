@@ -23,6 +23,7 @@
 }
 
 .navbar-logo img {
+    display: block;
     height: 40px;
 }
 
@@ -54,7 +55,7 @@
     }
 
     .navbar-logo img {
-        height: 35px;
+        display: none;
     }
 
     .spacer-right {

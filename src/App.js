@@ -1,18 +1,24 @@
 import React from 'react'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-import Footer from './Components/Footer'
+
 import Header from './Components/Header'
-import MainContent from './Components/MainContent/MainContent'
+import LandingPage from './Components/LandingPage/LandingPage'
+import Register from './Components/Register/Register'
 
 class App extends React.Component {
 
   render() {
     return (
-      <div className="App" style={{height:'100%'}}>
-        <Header />
-        <MainContent />
-        <Footer />
+      <Router>
+        <div className="App" style={{height:'100%'}}>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/register" component={Register}/>
+          </Switch>
       </div>
+      </Router>
     ); 
   }
 }

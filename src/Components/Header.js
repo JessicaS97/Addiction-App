@@ -1,4 +1,5 @@
 import React from "react"
+
 import NavBar from './NavBar/NavBar'
 import LandingPage from './LandingPage/LandingPage'
 import SideBar from './SideBar/SideBar'
@@ -32,7 +33,6 @@ class Header extends React.Component {
                 <NavBar clickHandler={this.toggleClickHandler}/>
                 <SideBar show={this.state.sideBarOpen}/>
                 {backdrop}
-                <LandingPage />
             </div>
         )
     }
