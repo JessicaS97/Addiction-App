@@ -1,12 +1,19 @@
 import React from 'react'
 
 import './LogIn.css'
+import login from './login.png'
 
 class LogIn extends React.Component {
     render() {
         return(
             <div className="login">
                 <h1>Welcome Back</h1>
+                <div className="login-img">
+                    <img src={login} alt="avatar"></img>
+                </div>
+                <div className="spacer">
+                </div>
+                <div className="login-form">
                 <form onSubmit={this.handleSubmit} noValidate>
                     <div className="userName">
                         <label htmlFor="userName">User Name</label>
@@ -27,6 +34,7 @@ class LogIn extends React.Component {
                             />
                     </div>
                 </form>
+                </div>
             </div>
         )
     }

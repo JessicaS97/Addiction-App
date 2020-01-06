@@ -5,9 +5,17 @@
     flex-direction: column;
 }
 
+.login-img img {
+    height: 300px;
+}
+
 form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.login-form {
+    display: flex;
 }
