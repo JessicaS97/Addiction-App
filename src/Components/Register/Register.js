@@ -4,7 +4,42 @@ import {Link} from 'react-router-dom'
 import './Register.css'
 import users from './register.png'
 
+const validForm = formErrors => {
+    let valid = true
+    Object.values(formErrors).forEach(val => {
+        val.length > 0 && (valid = false)
+    })
+    return valid
+}
+
 class Register extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            firstName: "",
+            userName: "",
+            email: "", 
+            password: "",
+            formErrors: {
+                firstName: "",
+                userName: "",
+                email: "", 
+                password: ""
+            }
+        }
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+
+        if (validForm(this.state.formErrors)) {
+            console.log("valid")
+        } else {
+            console.log("invalid")
+        }
+    }
+
     render() {
         return(
             <div className="register">
@@ -49,7 +84,7 @@ class Register extends React.Component {
                         <div className="password">
                             <label>Password</label>
                             <input 
-                                type="text" 
+                                type="password" 
                                 placeholder="Password"
                                 name="password" 
                                 noValidate
