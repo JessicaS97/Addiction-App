@@ -109,6 +109,7 @@ class Register extends React.Component {
                         <div className="userName">
                             <label>User Name</label>
                             <input 
+                            className={formErrors.userName.length > 0 ? "error" : null}
                                 type="text" 
                                 placeholder="User Name"
                                 name="userName" 
@@ -122,6 +123,7 @@ class Register extends React.Component {
                         <div className="email">
                             <label>Email</label>
                             <input 
+                                className={formErrors.email.length > 0 ? "error" : null}
                                 type="text" 
                                 placeholder="Email"
                                 name="email" 
@@ -135,6 +137,7 @@ class Register extends React.Component {
                         <div className="password">
                             <label>Password</label>
                             <input 
+                                className={formErrors.password.length > 0 ? "error" : null}
                                 type="password" 
                                 placeholder="Password"
                                 name="password" 
