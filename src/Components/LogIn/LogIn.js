@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import './LogIn.css'
 import login from './login.png'
@@ -14,27 +15,30 @@ class LogIn extends React.Component {
                 <div className="spacer">
                 </div>
                 <div className="login-form">
-                <form onSubmit={this.handleSubmit} noValidate>
-                    <div className="userName">
-                        <label htmlFor="userName">User Name</label>
-                        <input 
-                                type="text" 
-                                placeholder="User Name"
-                                name="userName" 
-                                noValidate
-                            />
-                    </div>
-                    <div className="password">
-                    <label htmlFor="password">Password</label>
-                        <input 
-                                type="password" 
-                                placeholder="Password"
-                                name="password" 
-                                noValidate
-                            />
-                    </div>
-                </form>
+                    <form onSubmit={this.handleSubmit} noValidate>
+                        <div className="username">
+                            <label htmlFor="userName">User Name</label>
+                            <input 
+                                    type="text" 
+                                    placeholder="User Name"
+                                    name="userName" 
+                                    noValidate
+                                />
+                        </div>
+                        <div className="password-login">
+                        <label htmlFor="password">Password</label>
+                            <input 
+                                    type="password" 
+                                    placeholder="Password"
+                                    name="password" 
+                                    noValidate
+                                />
+                        </div>
+                    </form>
                 </div>
+                <Link to="/register">
+                    <a href="/">Don't have an account?</a>
+                </Link>
             </div>
         )
     }

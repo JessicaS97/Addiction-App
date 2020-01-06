@@ -10,19 +10,18 @@
     height: 280px;
 }
 
-form {
+.login-form {
     display: flex;
+    width: 300px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.login-form {
-    display: flex;
-    width: 300px;
-}
-
-.userName, 
-.password {
+.username, 
+.password-login {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
