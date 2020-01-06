@@ -58,7 +58,7 @@ class Register extends React.Component {
                 : "";
                 break
             case 'userName':
-                formErrors.lastName = value.length < 3
+                formErrors.userName = value.length < 3
                 ? "minimum 3 characters required"
                 : "";
                 break
