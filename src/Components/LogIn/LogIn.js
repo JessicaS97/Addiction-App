@@ -36,9 +36,13 @@ class LogIn extends React.Component {
                         </div>
                     </form>
                 </div>
-                <Link to="/register">
-                    <a href="/">Don't have an account?</a>
-                </Link>
+                <div className="signin">
+                    <button type="submit">Sign In</button>
+                    <br></br>
+                    <Link to="/register">
+                        <a href="/">Don't have an account?</a>
+                    </Link>
+                </div>
             </div>
         )
     }
