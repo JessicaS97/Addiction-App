@@ -91,7 +91,7 @@ class Register extends React.Component {
                 </div>
                 <div className="register-form">
                     <h1>Create Account</h1>
-                    <form onSubmit={this.handleSubmit} noValidate>
+                    <form action="./register.php" method="POST" onSubmit={this.handleSubmit} noValidate>
                         <div className="firstName">
                             <label htmlFor="firstName">First Name</label>
                             <input 
