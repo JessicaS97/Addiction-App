@@ -101,6 +101,7 @@ class Register extends React.Component {
                                 name="firstName" 
                                 noValidate
                                 onChange={this.handleChange}
+                                required
                             />
                             {formErrors.firstName.length > 0 && (
                             <span className="errorMessage">{formErrors.firstName}</span>
@@ -115,6 +116,7 @@ class Register extends React.Component {
                                 name="userName" 
                                 noValidate
                                 onChange={this.handleChange}
+                                required
                             />
                             {formErrors.userName.length > 0 && (
                             <span className="errorMessage">{formErrors.userName}</span>
@@ -129,6 +131,7 @@ class Register extends React.Component {
                                 name="email" 
                                 noValidate
                                 onChange={this.handleChange}
+                                required
                             />
                             {formErrors.email.length > 0 && (
                             <span className="errorMessage">{formErrors.email}</span>
@@ -143,6 +146,7 @@ class Register extends React.Component {
                                 name="password" 
                                 noValidate
                                 onChange={this.handleChange}
+                                required
                             />
                             {formErrors.password.length > 0 && (
                             <span className="errorMessage">{formErrors.password}</span>
