@@ -6,6 +6,7 @@ import Header from './Components/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
 import Register from './Components/Register/Register'
 import LogIn from './Components/LogIn/LogIn'
+import GuestHome from './Components/GuestHome/GuestHome'
 
 class App extends React.Component {
 
@@ -18,6 +19,7 @@ class App extends React.Component {
             <Route path="/" exact component={LandingPage} />
             <Route path="/register" component={Register}/>
             <Route path="/login" component={LogIn}/>
+            <Route path="/guest-home" component={GuestHome}/>
           </Switch>
       </div>
       </Router>

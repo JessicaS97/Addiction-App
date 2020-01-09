@@ -17,6 +17,10 @@ class LandingPage extends React.Component {
                     <button href="/register">Register</button>
                 </Link>
                 <br></br>
+                <Link to="/guest-home">
+                    <button href="/register">Log In as Guest</button>
+                </Link>
+                <br></br>
                 <Link to="/login">
                     <a href="/">Already have an account?</a>
                 </Link>
