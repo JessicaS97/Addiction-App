@@ -10,6 +10,13 @@ import GuestHome from './Components/GuestHome/GuestHome'
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoggedIn: false
+    }
+  }
+
   render() {
     return (
       <Router>
@@ -19,9 +26,8 @@ class App extends React.Component {
             <Route path="/" exact component={LandingPage} />
             <Route path="/register" component={Register}/>
             <Route path="/login" component={LogIn}/>
-            <Route path="/guest-home" component={GuestHome}/>
           </Switch>
-      </div>
+        </div>
       </Router>
     ); 
   }
