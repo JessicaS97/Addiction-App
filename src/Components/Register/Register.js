@@ -40,7 +40,7 @@ class Register extends React.Component {
         e.preventDefault();
 
         if (validForm(this.state)) {
-            console.log("valid")
+            console.log(this.state)
         } else {
             console.log("invalid")
         }
@@ -91,9 +91,9 @@ class Register extends React.Component {
                 </div>
                 <div className="register-form">
                     <h1>Create Account</h1>
-                    <form action="./register.php" method="POST" onSubmit={this.handleSubmit} noValidate>
+                    <form action="#" method="POST">
                         <div className="firstName">
-                            <label htmlFor="firstName">First Name</label>
+                            <label>First Name</label>
                             <input 
                                 className={formErrors.firstName.length > 0 ? "error" : null}
                                 type="text" 
@@ -102,6 +102,7 @@ class Register extends React.Component {
                                 noValidate
                                 onChange={this.handleChange}
                                 required
+                                value={this.state.firstName}
                             />
                             {formErrors.firstName.length > 0 && (
                             <span className="errorMessage">{formErrors.firstName}</span>
@@ -117,6 +118,7 @@ class Register extends React.Component {
                                 noValidate
                                 onChange={this.handleChange}
                                 required
+                                value={this.state.userName}
                             />
                             {formErrors.userName.length > 0 && (
                             <span className="errorMessage">{formErrors.userName}</span>
@@ -132,6 +134,7 @@ class Register extends React.Component {
                                 noValidate
                                 onChange={this.handleChange}
                                 required
+                                value={this.state.email}
                             />
                             {formErrors.email.length > 0 && (
                             <span className="errorMessage">{formErrors.email}</span>
@@ -153,7 +156,8 @@ class Register extends React.Component {
                             )}
                         </div>
                         <div className="createAccount">
-                            <button type="submit">Create Account</button>
+                            <button type="submit" onClick={e=> this.handleSubmit(e)}  value=
+                            "Submit">Create Account</button>
                             <br></br>
                             <Link to="/login">
                                 <a href="/">Already have an account?</a>
