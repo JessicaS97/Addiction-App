@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 import './Register.css'
 import users from './register.png'
+import Header from './../Header'
 
 const emailRegex = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
@@ -83,7 +84,9 @@ class Register extends React.Component {
         const {formErrors} = this.state
 
         return(
-            <div className="register">
+            <div>
+                <Header />
+                <div className="register">
                 <div className="register-img">
                     <img src={users} alt="users"></img>
                 </div>
@@ -164,6 +167,7 @@ class Register extends React.Component {
                             </Link>
                         </div>
                     </form>
+                </div>
                 </div>
             </div>
         )

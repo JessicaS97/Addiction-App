@@ -3,11 +3,14 @@ import {Link} from 'react-router-dom'
 
 import './LandingPage.css'
 import background from './meditation.png'
+import Header from './../Header'
 
 class LandingPage extends React.Component {
     render() {
         return(
-            <div className="landingPage">
+            <div>
+                <Header/ >
+                <div className ="landingPage">
                 <div className="background-img">
                     <img src={background} alt="meditation"></img>
                 </div>
@@ -25,6 +28,7 @@ class LandingPage extends React.Component {
                     <a href="/">Already have an account?</a>
                 </Link>
             </div>
+        </div>
         )
     }
 }

@@ -3,11 +3,14 @@ import {Link} from 'react-router-dom'
 
 import './LogIn.css'
 import login from './login.png'
+import Header from './../Header'
 
 class LogIn extends React.Component {
     render() {
         return(
-            <div className="login">
+            <div>
+                 <Header />
+                <div className="login">
                 <h1>Welcome Back</h1>
                 <div className="login-img">
                     <img src={login} alt="avatar"></img>
@@ -43,6 +46,8 @@ class LogIn extends React.Component {
                         <a href="/">Don't have an account?</a>
                     </Link>
                 </div>
+                </div>
+                
             </div>
         )
     }
