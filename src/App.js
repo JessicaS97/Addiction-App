@@ -21,12 +21,10 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App" style={{height:'100%'}}>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/register" component={Register}/>
-            <Route path="/login" component={LogIn}/>
-          </Switch>
+            <Route path="/" exact component={Header} />
+            <Route path="/guest-home" component={GuestHome} />
+            <Route path="/register" component={Header}/>
+            <Route path="/login" component={Header}/>
         </div>
       </Router>
     ); 
