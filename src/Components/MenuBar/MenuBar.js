@@ -16,12 +16,18 @@ class MenuBar extends React.Component {
             </div>               
             <div className="menubar">
                 <ul>
-                    <Link to="/main">
+                    <Link to="/guest-main">
                         <li><a href="/"><FontAwesomeIcon icon={faHome} size="2x" /></a></li>
                     </Link>
-                    <li><a href="/"><FontAwesomeIcon icon={faUsers} size="2x" /></a></li>
-                    <li><a href="/"><FontAwesomeIcon icon={faFire} size="2x" /></a></li>
-                    <li><a href="/"><FontAwesomeIcon icon={faQuestionCircle} size="2x" /></a></li>
+                    <Link to="guest-community">
+                        <li><a href="/"><FontAwesomeIcon icon={faUsers} size="2x" /></a></li>
+                    </Link>
+                    <Link to="guest-motivation">
+                        <li><a href="/"><FontAwesomeIcon icon={faFire} size="2x" /></a></li>
+                    </Link>
+                    <Link to="guest-support">
+                        <li><a href="/"><FontAwesomeIcon icon={faQuestionCircle} size="2x" /></a></li>
+                    </Link>
                 </ul>
             </div>
         </div>
