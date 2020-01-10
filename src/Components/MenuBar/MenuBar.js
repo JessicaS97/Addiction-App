@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUsers, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUsers, faFire, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+
+import './MenuBar.css'
 
 class MenuBar extends React.Component {
     render() {
@@ -16,7 +18,8 @@ class MenuBar extends React.Component {
                 <div className="menubar">
                     <FontAwesomeIcon icon={faHome} size="3x" />
                     <FontAwesomeIcon icon={faUsers} size="3x" />
-                    <FontAwesomeIcon icon={faHome} size="3x" />
+                    <FontAwesomeIcon icon={faFire} size="3x" />
+                    <FontAwesomeIcon icon={faQuestionCircle} size="3x" />
                 </div>
             </div>
         )
