@@ -53,14 +53,11 @@
     .menubar ul {
         flex-direction: row;
         padding: 0;
+        justify-content: space-evenly;
     }
 
     .menubar-button {
         height: 20px;
         margin: 0;
-    }
-
-    .menu li {
-        margin-left: 50px;
     }
 }
