@@ -84,3 +84,21 @@ input {
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 769px) {
+
+    .spacer {
+        display: none;
+    }
+
+    .register-img img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .firstName, 
+    .userName {
+        width: 100%;
+    }
+}
