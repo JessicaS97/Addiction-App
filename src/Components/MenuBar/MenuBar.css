@@ -30,3 +30,37 @@
     list-style: none;
     margin-bottom: 65px;
 }
+
+@media (max-width: 769px) {
+    .menubar {
+        flex-direction: row;
+        color: white;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        bottom: 0px;
+    }
+
+    .menubar ul {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menubar-button {
+        height: 20px;
+        margin: 0;
+    }
+
+    .menu li {
+        margin-left: 50px;
+    }
+}
