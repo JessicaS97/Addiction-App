@@ -2,9 +2,7 @@
     width: 150px;
     height: 100vh;
     background-color: pink;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: fixed;
 }
 
 .menubar-button {

@@ -29,10 +29,6 @@ class App extends React.Component {
             <Route path="/register" component={Register}/>
             <Route path="/login" component={LogIn}/>
             <Route path="/guest-home" component={GuestHome} />
-            <Route path="/guest-main" component={Main}></Route>
-            <Route path="/guest-community" component={Community}></Route>
-            <Route path="/guest-motivation" component={Motivation}></Route>
-            <Route path="/guest-support" component={Support}></Route>
           </Switch>
         </div>
       </Router>
