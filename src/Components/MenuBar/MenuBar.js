@@ -16,7 +16,7 @@ class MenuBar extends React.Component {
             </div>               
             <div className="menubar">
                 <ul>
-                    <Link to="/guest-main">
+                    <Link to="/guest-home">
                         <li><a href="/"><FontAwesomeIcon icon={faHome} size="2x" /></a></li>
                     </Link>
                     <Link to="guest-community">
