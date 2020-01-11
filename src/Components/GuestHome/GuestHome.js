@@ -8,12 +8,11 @@ import Main from './../Main/Main'
 class GuestHome extends React.Component {
     render() {
         return(
-            <Router>
+
                 <div className="guest-home">
                 <MenuBar />
-                <Route path="/guest-main" component={Main} />
+
             </div>
-            </Router>
         )
     }
 }
