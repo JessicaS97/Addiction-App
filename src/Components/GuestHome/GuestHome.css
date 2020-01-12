@@ -33,11 +33,18 @@
 
     .addictions-list {
         width: 50px;
+        margin: 0px;
     }
 
     .addictions {
-        width: 500px;
+        width: 300px;
         flex-direction: column;
+    }
+
+    .guest-home {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
 }
