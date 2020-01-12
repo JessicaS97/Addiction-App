@@ -9,7 +9,12 @@ class GuestHome extends React.Component {
         return(
             <div className="guest-home">
                 <MenuBar />
-                <h1>Guest Home</h1>
+                <div className="addictions-list">
+                    <h1>Addictions</h1>
+                    <div className="addictions">
+                        <div ></div>
+                    </div>
+                </div>
             </div>
         )
     }
