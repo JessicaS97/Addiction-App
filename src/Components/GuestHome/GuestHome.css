@@ -10,9 +10,15 @@
 }
 
 .addictions {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: grey;
+    height: 400px;
+}
+
+.addictions a {
+    margin: 0;
+    padding: 0;
 }

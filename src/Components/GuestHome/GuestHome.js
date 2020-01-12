@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 
 import './GuestHome.css'
 import MenuBar from './../MenuBar/MenuBar'
@@ -14,8 +14,12 @@ class GuestHome extends React.Component {
                     <h1>Addictions</h1>
                     <div className="addictions">
                         <AddictionItem />
-                        <AddictionItem />
-                        <AddictionItem />
+                        <Link>
+                            <AddictionItem />
+                        </Link>
+                        <Link>
+                            <AddictionItem />
+                        </Link>
                     </div>
                 </div>
             </div>

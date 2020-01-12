@@ -3,9 +3,14 @@ import React from 'react'
 import './AddictionItem.css'
 
 class AddictionItem extends React.Component {
+
+    clicked = () => {
+        console.log("clicked");
+    }
+
     render() {
         return(
-            <div className="addiction-item">
+            <div className="addiction-item" onClick={() => this.clicked()}>
                 <h1>Coffee</h1>
             </div>
         )
