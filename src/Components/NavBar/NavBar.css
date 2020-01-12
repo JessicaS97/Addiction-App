@@ -40,6 +40,10 @@
     padding: 0 1.5rem;
 }
 
+.navbar-items li:first-child {
+    color: black;
+}
+
 .navbar-items a {
     color:darkblue;
     text-decoration: none;
@@ -50,6 +54,7 @@
 }
 
 @media (max-width: 768px) {
+
     .navbar-items {
         display: none;
     }
