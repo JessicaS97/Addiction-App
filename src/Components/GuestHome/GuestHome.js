@@ -14,12 +14,8 @@ class GuestHome extends React.Component {
                     <h1>Addictions</h1>
                     <div className="addictions">
                         <AddictionItem />
-                        <Link>
-                            <AddictionItem />
-                        </Link>
-                        <Link>
-                            <AddictionItem />
-                        </Link>
+                        <AddictionItem />
+                        <AddictionItem />
                     </div>
                 </div>
             </div>

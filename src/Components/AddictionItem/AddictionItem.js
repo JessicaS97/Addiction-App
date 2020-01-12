@@ -5,7 +5,7 @@ import './AddictionItem.css'
 class AddictionItem extends React.Component {
 
     clicked = () => {
-        console.log("clicked");
+        alert("clicked");
     }
 
     render() {
