@@ -6,7 +6,7 @@ class AddictionItem extends React.Component {
     render() {
         return(
             <div className="addiction-item">
-                
+                <h1>Coffee</h1>
             </div>
         )
     }
