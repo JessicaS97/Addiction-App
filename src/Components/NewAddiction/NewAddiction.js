@@ -44,6 +44,14 @@ class NewAddiction extends React.Component {
                 return (
                     <MenuBar />
                 )
+            case 2:
+                return <h1>SoberDate</h1>
+            case 3:
+                return <h1>Savings</h1>
+            case 4:
+                return <h1>Motive</h1>
+            case 5:
+                return <h1>Confirm</h1> 
             default:
         }
     }
