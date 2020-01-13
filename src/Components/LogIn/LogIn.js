@@ -42,6 +42,10 @@ class LogIn extends React.Component {
                 <div className="signin">
                     <button type="submit">Sign In</button>
                     <br></br>
+                    <Link to="/guest-home">
+                        <button>Sign In As Guest</button>
+                    </Link>
+                    <br></br>
                     <Link to="/register">
                         <a href="/">Don't have an account?</a>
                     </Link>
