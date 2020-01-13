@@ -10,6 +10,7 @@ import Motivation from './Components/Motivation/Motivation'
 import Support from './Components/Support/Support'
 
 
+
 class App extends React.Component {
 
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Route path="/guest-community" component={Community} />
             <Route path="/guest-support" component={Support} />
             <Route path="/guest-motivation" component={Motivation} />
+            <Route path="/new-addiction" component={}></Route>
           </Switch>
         </div>
       </Router>
