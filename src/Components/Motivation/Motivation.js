@@ -26,14 +26,13 @@ class Motivation extends React.Component {
             <div>
                 <MenuBar />
                 <div className="motivation">
-
-                </div>
-                <h1>Motivation</h1>
-                <div className="quote-grid">
-                    {this.state.quotes.length > 0 &&
-                    this.state.quotes.map(
-                    ({quote, questionId}) => <h2>{quote}</h2> 
-                    )}
+                    <h1>Motivation</h1>
+                    <div className="quote-grid">
+                        {this.state.quotes.length > 0 &&
+                        this.state.quotes.map(
+                        ({quote, questionId}) => <h2>{quote}</h2> 
+                        )}
+                    </div>
                 </div>
             </div>
         )
