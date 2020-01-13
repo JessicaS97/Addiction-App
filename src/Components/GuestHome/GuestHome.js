@@ -13,7 +13,7 @@ class GuestHome extends React.Component {
                 <div className="addictions-list">
                     <h1>Addictions</h1>
                     <div className="addictions">
-                        <Link t0="/new-addiction">
+                        <Link to="/new-addiction">
                             <button>+</button>
                         </Link>
                         <AddictionItem />
