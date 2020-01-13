@@ -4,8 +4,14 @@ import './NewAddiction.css'
 
 class AddictionList extends React.Component {
 
+    state = {
+        selectedValue:''
+    }
+
     handleSelect = e => {
-        console.log(this.props.values.addiction)
+        this.setState = ({
+            selectedValue: e.target.value
+        })
     }
 
     continue = e => {
@@ -30,8 +36,8 @@ class AddictionList extends React.Component {
                     <option value="Sugar">Sugar</option>
                     <option>Other</option>
                 </select>
-                <label className="other" style={{display: values.addiction==='Other' ? 'block' : ''}}>
-                    <input type="text" name="other"/>
+                <label className="other" style={{display: this.state.selectedValue === 'Other' ? 'block' : ''}}>
+                    <input type="text" name="other" onChange={handleChange('addiction')}/>
                 </label>
                 <button onClick={this.continue}>Next</button>
                 </form>
