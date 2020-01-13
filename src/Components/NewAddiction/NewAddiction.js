@@ -40,9 +40,18 @@ class NewAddiction extends React.Component {
         const { step } = this.state
         const {addiction, startDate, savingCost, savingTime, motive} = this.state
         const values = {addiction, startDate, savingCost, savingTime, motive}
-        return(
-            <div></div>
-        )
+        switch(step) {
+            case 1:
+                return(
+                    <div>
+                        <MenuBar />
+                        <AddictionList />
+                    </div>
+                )
+            default: return(
+                <div></div>
+            )
+        }
     }
 }
 
