@@ -34,6 +34,7 @@ class NewAddiction extends React.Component {
 
     handleChange = input => e => {
         this.setState({[input]: e.target.value})
+        alert(this.state.addiction)
     }
 
     render() {
@@ -45,7 +46,40 @@ class NewAddiction extends React.Component {
                 return(
                     <div>
                         <MenuBar />
-                        <AddictionList />
+                        <AddictionList 
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
+                    </div>
+                )
+
+            case 2:
+                return(
+                    <div>
+                        <MenuBar />
+                        <SoberDate />
+                    </div>
+                )
+            case 3:
+                return(
+                    <div>
+                        <MenuBar />
+                        <Savings />
+                    </div>
+                )
+            case 4:
+                return(
+                    <div>
+                        <MenuBar />
+                        <Motive />
+                    </div>
+                )
+            case 5:
+                return(
+                    <div>
+                        <MenuBar />
+                        <Confirm />
                     </div>
                 )
             default: return(

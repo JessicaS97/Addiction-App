@@ -4,6 +4,10 @@ import './NewAddiction.css'
 
 class AddictionList extends React.Component {
 
+    handleSelect = e => {
+        console.log(this.props.values.addiction)
+    }
+
     continue = e => {
         e.preventDefault()
         this.props.nextStep()
@@ -14,22 +18,22 @@ class AddictionList extends React.Component {
         return(
             <div>
                 <h1>Choose Addiction:</h1>
-                <form className="addiction-form">
-                <select>
-                    <option>Alcohol</option>
-                    <option>Caffeine</option>
-                    <option>Gambling</option>
-                    <option>Junk Food</option>
-                    <option>Meet and Diary</option>
-                    <option>Social Media</option>
-                    <option>Sugar</option>
+                <form className="addiction-form" 
+                    onChange={handleChange('addiction')} defaultValue={values.addiction}>
+                <select onChange={this.handleSelect}> 
+                    <option value="Alcohol">Alcohol</option>
+                    <option value="Caffeine">Caffeine</option>
+                    <option value="Gambling">Gambling</option>
+                    <option value="Junk Food"> Junk Food</option>
+                    <option value="Meat and Diary">Meat and Diary</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Sugar">Sugar</option>
                     <option>Other</option>
                 </select>
-                    <label>
-                        <span>Other</span>
-                        <input type="radio"/>
-                        <input type="text" name="other" value=""/>
-                    </label>
+                <label className="other" style={{display: values.addiction==='Other' ? 'block' : ''}}>
+                    <input type="text" name="other"/>
+                </label>
+                <button onClick={this.continue}>Next</button>
                 </form>
             </div>
         )
