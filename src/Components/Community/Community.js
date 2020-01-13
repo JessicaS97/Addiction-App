@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Community.css'
 import MenuBar from './../MenuBar/MenuBar'
-import quoteService from './../../quotes'
+import quoteService from './../../quoteService'
 
 class Community extends React.Component {
     state = {
@@ -10,11 +10,15 @@ class Community extends React.Component {
     }
 
     getQuote = () => {
-        quoteService.then(quote => {
+        quoteService().then(quote => {
             this.setState({
                 quotes: quote
             })
         })
+    }
+
+    componentDidMount() {
+        this.getQuote()
     }
 
     render() {
@@ -22,6 +26,10 @@ class Community extends React.Component {
             <div className="community">
                 <MenuBar />
                 <h1>Community</h1>
+                {this.state.quotes.length > 0 &&
+                this.state.quotes.map(
+                ({quote, questionId}) => <h4>{quote}</h4> 
+                )}
             </div>
         )
     }
