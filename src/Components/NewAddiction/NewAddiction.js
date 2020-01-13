@@ -14,6 +14,20 @@ class NewAddiction extends React.Component {
 
     nextStep = () => {
         const { step } = this.state
+        this.setState({
+            step: step + 1
+        })
+    }
+
+    prevStep = () => {
+        const { step } = this.state
+        this.setState({
+            step: step - 1
+        })
+    }
+
+    handleChange = input => e => {
+        this.setState({[input]: e.target.value})
     }
 
     render() {
