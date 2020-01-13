@@ -6,6 +6,7 @@ import SoberDate from './SoberDate'
 import Savings from './Savings'
 import Motive from './Motive'
 import Confirm from './Confirm'
+import { isThisTypeNode } from 'typescript'
 
 class NewAddiction extends React.Component {
     state = {
@@ -39,21 +40,9 @@ class NewAddiction extends React.Component {
         const { step } = this.state
         const {addiction, startDate, savingCost, savingTime, motive} = this.state
         const values = {addiction, startDate, savingCost, savingTime, motive}
-        switch(step) {
-            case 1:
-                return (
-                    <MenuBar />
-                )
-            case 2:
-                return <h1>SoberDate</h1>
-            case 3:
-                return <h1>Savings</h1>
-            case 4:
-                return <h1>Motive</h1>
-            case 5:
-                return <h1>Confirm</h1> 
-            default:
-        }
+        return(
+            <div></div>
+        )
     }
 }
 
