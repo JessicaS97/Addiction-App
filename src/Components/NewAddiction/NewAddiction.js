@@ -1,6 +1,11 @@
 import React from 'react'
 
 import MenuBar from './../MenuBar/MenuBar'
+import AddictionList from './AddictionList'
+import SoberDate from './SoberDate'
+import Savings from './Savings'
+import Motive from './Motive'
+import Confirm from './Confirm'
 
 class NewAddiction extends React.Component {
     state = {
@@ -31,11 +36,16 @@ class NewAddiction extends React.Component {
     }
 
     render() {
-        return(
-            <div>
-                <MenuBar />
-            </div>
-        )
+        const { step } = this.state
+        const {addiction, startDate, savingCost, savingTime, motive} = this.state
+        const values = {addiction, startDate, savingCost, savingTime, motive}
+        switch(step) {
+            case 1:
+                return (
+                    <MenuBar />
+                )
+            default:
+        }
     }
 }
 
