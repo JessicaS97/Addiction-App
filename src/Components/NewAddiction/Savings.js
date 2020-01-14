@@ -6,11 +6,11 @@ class Savings extends React.Component {
         return(
             <div className="savings">
                 <h1>Savings</h1>
-                <label>
-                    <input name="savingCost" type="text" onChange={handleChange('savingCost')} value={values.savingCost === '' ? "savingCost" : values.savingCost}/>
+                <label>Please Enter $ spent on {values.otherAddiction === '' ? values.addiction : values.otherAddiction} a day
+                    <input type="text" onChange={handleChange('savingCost')} value={values.savingCost}/>
                 </label>
-                <label>
-                    <input name="savingTime" type="text" onChange={handleChange('savingTime')} value={values.savingTime}/>
+                <label>Please Enter time spent on {values.otherAddiction === '' ? values.addiction : values.otherAddiction} a day
+                    <input type="text" onChange={handleChange('savingTime')} value={values.savingTime}/>
                 </label>
                 <button onClick={nextStep}>Next</button>
                 <button onClick={prevStep}>Back</button>

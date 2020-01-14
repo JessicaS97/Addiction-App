@@ -6,7 +6,7 @@ class Motive extends React.Component {
         return(
             <div className="motive">
                 <h1>Motive</h1>
-                <input type="text" onChange={handleChange}/>
+                <input type="text" onChange={handleChange('motive')} value={values.motive}/>
                 <button onClick={nextStep}>Next</button>
                 <button onClick={prevStep}>Back</button>
             </div>

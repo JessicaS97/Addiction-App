@@ -15,7 +15,10 @@
     display: none;
 }
 
-.sober-date {
+.sober-date,
+.confirm,
+.savings,
+.motive {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,6 +6,7 @@ import SoberDate from './SoberDate'
 import Savings from './Savings'
 import Motive from './Motive'
 import Confirm from './Confirm'
+import GuestHome from '../GuestHome/GuestHome'
 
 class NewAddiction extends React.Component {
     state = {
@@ -93,8 +94,16 @@ class NewAddiction extends React.Component {
                 return(
                     <div>
                         <MenuBar />
-                        <Confirm />
+                        <Confirm
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                        />
                     </div>
+                )
+            case 6:
+                return(
+                    <GuestHome />
                 )
             default: return(
                 <div></div>
