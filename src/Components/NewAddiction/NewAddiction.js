@@ -69,14 +69,24 @@ class NewAddiction extends React.Component {
                 return(
                     <div>
                         <MenuBar />
-                        <Savings />
+                        <Savings
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
                     </div>
                 )
             case 4:
                 return(
                     <div>
                         <MenuBar />
-                        <Motive />
+                        <Motive 
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values}
+                        />
                     </div>
                 )
             case 5:

@@ -2,9 +2,13 @@ import React from 'react'
 
 class Motive extends React.Component {
     render() {
+        const {values, nextStep, prevStep, handleChange} = this.props
         return(
-            <div>
+            <div className="motive">
                 <h1>Motive</h1>
+                <input type="text" onChange={handleChange}/>
+                <button onClick={nextStep}>Next</button>
+                <button onClick={prevStep}>Back</button>
             </div>
         )
     }
