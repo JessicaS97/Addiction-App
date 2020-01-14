@@ -10,11 +10,13 @@ class AddictionList extends React.Component {
         this.state = {
             selectedValue: ''
         }
+        this.handleSelect = this.handleSelect.bind(this)
     }
 
     handleSelect = e => {
-        this.setState = ({ selectedValue: 'something' }, () => {
-            console.log(this.state)
+        e.preventDefault()
+        this.setState = ({ 
+            selectedValue: e.target.value
         })
     }
 
@@ -28,11 +30,10 @@ class AddictionList extends React.Component {
         return(
             <div className="addiction-list">
                 <h1>Choose Addiction:</h1>
-                <form className="addiction-form" 
-                    onChange={handleChange('addiction')} defaultValue={values.addiction}>
-                <select onChange={this.handleSelect}> 
-                    <option>Alcohol</option>
-                    <option>Caffeine</option>
+                <form className="addiction-form">
+                <select onChange={handleChange('addiction')}> 
+                    <option value="alcohol">Alcohol</option>
+                    <option value="caffeine">Caffeine</option>
                     <option>Gambling</option>
                     <option> Junk Food</option>
                     <option>Meat and Diary</option>>
@@ -43,8 +44,7 @@ class AddictionList extends React.Component {
                 <label className="other" style={{display: this.state.selectedValue === 'Other' ? 'block' : 'none'}}>
                     <input type="text" name="other" onChange={handleChange('addiction')}/>
                 </label>
-                <button onClick={this.continue}>Next</button>
-                <h1>{this.state.addiction}</h1>
+                <button onClick={this.nextStep}>Next</button>
                 </form>
             </div>
         )

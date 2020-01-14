@@ -6,7 +6,6 @@ import SoberDate from './SoberDate'
 import Savings from './Savings'
 import Motive from './Motive'
 import Confirm from './Confirm'
-import { isThisTypeNode } from 'typescript'
 
 class NewAddiction extends React.Component {
     state = {
@@ -57,6 +56,7 @@ class NewAddiction extends React.Component {
                 return(
                     <div>
                         <MenuBar />
+                        <h1>{this.state.addiction}</h1>
                         <SoberDate 
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
