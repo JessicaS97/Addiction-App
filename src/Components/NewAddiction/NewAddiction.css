@@ -5,6 +5,17 @@
     flex-direction: column;
 }
 
+.addiction-list h1 {
+    margin: 0;
+}
+
 .other {
     display: none;
+}
+
+.sober-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
