@@ -22,7 +22,7 @@ class AddictionList extends React.Component {
             <div className="addiction-list">
                 <h1>Choose Addiction:</h1>
                 <form className="addiction-form">
-                <select onChange={handleChange('addiction')}> 
+                <select onChange={handleChange('addiction')} value={values.addiction}> 
                     <option value="alcohol">Alcohol</option>
                     <option value="caffeine">Caffeine</option>
                     <option>Gambling</option>
@@ -34,7 +34,7 @@ class AddictionList extends React.Component {
                 </select>
                 <label className="other" 
                 style={{display: values.addiction === 'Other' ? 'block' : 'none'}}>
-                    <input type="text" name="other" onChange={handleChange('otherAddiction')}/>
+                    <input type="text" name="other" onChange={handleChange('otherAddiction')} value={values.otherAddiction}/>
                 </label>
                 <button onClick={nextStep}>Next</button>
                 </form>
