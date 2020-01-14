@@ -14,7 +14,8 @@ class NewAddiction extends React.Component {
         startDate: '',
         savingCost: '',
         savingTime: '',
-        motive: ''
+        motive: '',
+        otherAddiction: ''
     }
 
     nextStep = () => {
@@ -37,8 +38,8 @@ class NewAddiction extends React.Component {
 
     render() {
         const { step } = this.state
-        const {addiction, startDate, savingCost, savingTime, motive} = this.state
-        const values = {addiction, startDate, savingCost, savingTime, motive}
+        const {addiction, startDate, savingCost, savingTime, motive, otherAddiction} = this.state
+        const values = {addiction, startDate, savingCost, savingTime, motive, otherAddiction}
         switch(step) {
             case 1:
                 return(
@@ -56,7 +57,6 @@ class NewAddiction extends React.Component {
                 return(
                     <div>
                         <MenuBar />
-                        <h1>{this.state.addiction}</h1>
                         <SoberDate 
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}

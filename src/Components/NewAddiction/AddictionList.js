@@ -4,15 +4,6 @@ import './NewAddiction.css'
 
 class AddictionList extends React.Component {
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            selectedValue: ''
-        }
-        this.handleSelect = this.handleSelect.bind(this)
-    }
-
     handleSelect = e => {
         e.preventDefault()
         this.setState = ({ 
@@ -26,7 +17,7 @@ class AddictionList extends React.Component {
     }
 
     render() {
-        const{ values, handleChange } = this.props
+        const{ nextStep, values, handleChange } = this.props
         return(
             <div className="addiction-list">
                 <h1>Choose Addiction:</h1>
@@ -41,10 +32,11 @@ class AddictionList extends React.Component {
                     <option>Sugar</option>
                     <option>Other</option>
                 </select>
-                <label className="other" style={{display: this.state.selectedValue === 'Other' ? 'block' : 'none'}}>
-                    <input type="text" name="other" onChange={handleChange('addiction')}/>
+                <label className="other" 
+                style={{display: values.addiction === 'Other' ? 'block' : 'none'}}>
+                    <input type="text" name="other" onChange={handleChange('otherAddiction')}/>
                 </label>
-                <button onClick={this.nextStep}>Next</button>
+                <button onClick={nextStep}>Next</button>
                 </form>
             </div>
         )
