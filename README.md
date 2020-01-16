@@ -1,4 +1,4 @@
-# Addiction App
+# Addiction
 Addiction is a platform to help users break bad habits by providing assessment of their habits and ongoing support along their journey 
 
 ## Built with
