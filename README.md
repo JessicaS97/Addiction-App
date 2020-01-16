@@ -2,6 +2,7 @@
 Addiction is a platform to help users break bad habits by providing assessment of their habits and ongoing support along their journey 
 
 ## Built with
+* CSS - Styling
 * npm - Package Manager
 * React.js - JavaScript framework used
 * VSCode - Text Editor
