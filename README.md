@@ -1,12 +1,12 @@
 # Addiction App
 Front End Project to help users break bad habits 
 
-# Built with
+## Built with
 * npm - Package Manager
 * React.js - JavaScript framework used
 * VSCode - Text Editor
 
-# Credits
+## Credits
 * Flaticon - Icon assets
 * FontAwesome - Icon assets
 
