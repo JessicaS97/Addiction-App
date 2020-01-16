@@ -17,8 +17,6 @@ class GuestHome extends React.Component {
                             <button>+</button>
                         </Link>
                         <AddictionItem />
-                        <AddictionItem />
-                        <AddictionItem />
                     </div>
                 </div>
             </div>
