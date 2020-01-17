@@ -8,7 +8,10 @@ class Confirm extends React.Component {
 
         const post = {
             addiction: values.addiction,
-            date: values.startDate
+            date: values.startDate,
+            savingCost: values.savingCost,
+            savingTime: values.savingTime, 
+            motive: values.motive
         }
 
         fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -32,8 +35,8 @@ class Confirm extends React.Component {
                 <h2>Cost: ${values.savingCost}/day</h2>
                 <h2>Time spent: {values.savingTime}h/day</h2>
                 <h2>Motive: {values.motive}</h2>
-                <Link to="/guest-home"
-                onClick={this.onClick}>Confirm
+                <Link to="/guest-home">
+                    <button onClick={this.onClick}>Confirm</button>
                 </Link>
                 <button onClick={prevStep}>Back</button>
             </div>
