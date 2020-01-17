@@ -1,15 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux'
+import {fetchPosts} from '../../actions/postActions'
 
 import './AddictionItem.css'
 
 class AddictionItem extends React.Component {
-constructor(props) {
-    super(props)
-    this.state = {
-        posts: []
+    constructor(props) {
+        super(props)
+        this.state = {
+            posts: []
+        }
     }
-}
+
+    componentWillMount() {
+        this.props.fetchPosts()
+    }
 
     render() {
         const postItems = this.state.posts.map(post => (
@@ -27,4 +33,4 @@ constructor(props) {
     }
 }
 
-export default AddictionItem
+export default connect(null, {fetchPosts})(AddictionItem)
