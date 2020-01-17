@@ -3,6 +3,27 @@ import {Link} from 'react-router-dom'
 
 class Confirm extends React.Component {
 
+    onClick = e => {
+        const { values } = this.props
+        e.preventDefault()
+
+        const post = {
+            addiction: values.addiction,
+            date: values.startDate
+        }
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json' 
+            },
+            body: JSON.stringify(post)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        this.context.router.history.push("/guest-home")
+    }
+
     reset = () => {
         const {step} = this.props
         this.setState({
@@ -21,7 +42,7 @@ class Confirm extends React.Component {
                 <h2>Time spent: {values.savingTime}h/day</h2>
                 <h2>Motive: {values.motive}</h2>
                 <Link to="/guest-home">
-                    <button>Confirm</button>
+                    <button onClick={this.onClick}>Confirm</button>
                 </Link>
                 <button onClick={prevStep}>Back</button>
             </div>
