@@ -18,16 +18,26 @@ class AddictionItem extends React.Component {
         this.props.fetchPosts()
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.newPost) {
+            this.props.posts.unshift(nextProps.newPost)
+        }
+    }
+
     render() {
         const postItems = this.props.posts.map(post => (
-            <div key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
+            <div key={post.id} className="addiction-item">
+                <h3>{post.addiction}</h3>
+                <h2>Start Date: {post.startDate}</h2>
+                <h2>$ {post.savingCost}</h2>
+                <h2>{post.savingTime}/h</h2>
+                <h2>Motive: {post.motive}</h2>
+                
             </div>
         ))
         return(
-            <div className="addiction-item">
-                <h1>Posts</h1>
+            <div className="addictions">
+                <h1>Addictions</h1>
                 {postItems}
             </div>
         )
@@ -36,11 +46,13 @@ class AddictionItem extends React.Component {
 
 AddictionItem.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired
+    posts: PropTypes.array.isRequired,
+    newPost: PropTypes.object
 }
 
 const mapStateToProps = state => ({
-    posts: state.posts.items
+    posts: state.posts.items,
+    newPost: state.posts.item
 })
 
 export default connect(mapStateToProps, {fetchPosts})(AddictionItem)

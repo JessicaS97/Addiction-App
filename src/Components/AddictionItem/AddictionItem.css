@@ -1,8 +1,16 @@
-.addiction-item {
+.addictions {
     background: rgb(223, 223, 223);
     width: 200px;
     height: 200px;
     border-radius: 20px;
     margin: 25px;
     cursor: pointer;
+}
+
+.addiction-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    flex-direction: column;
 }

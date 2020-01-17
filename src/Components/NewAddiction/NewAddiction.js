@@ -1,4 +1,6 @@
 import React from 'react'
+import {Provider} from 'react-redux'
+import store from '../../store'
 
 import MenuBar from './../MenuBar/MenuBar'
 import AddictionList from './AddictionList'
@@ -44,14 +46,14 @@ class NewAddiction extends React.Component {
         switch(step) {
             case 1:
                 return(
-                    <div>
+                        <div>
                         <MenuBar />
                         <AddictionList 
                             nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             values={values}
                         />
-                    </div>
+                        </div>
                 )
 
             case 2:
@@ -92,6 +94,8 @@ class NewAddiction extends React.Component {
                 )
             case 5:
                 return(
+                    <Provider store={store}>
+
                     <div>
                         <MenuBar />
                         <Confirm
@@ -100,10 +104,14 @@ class NewAddiction extends React.Component {
                         values={values}
                         />
                     </div>
+                    </Provider>
                 )
             case 6:
                 return(
+                    <Provider store={store}>
+
                     <GuestHome />
+                    </Provider>
                 )
             default: return(
                 <div></div>

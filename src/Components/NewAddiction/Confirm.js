@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {createPost} from '../../actions/postActions'
 
+
 class Confirm extends React.Component {
 
     onClick = e => {
@@ -24,7 +25,7 @@ class Confirm extends React.Component {
     render() {
         const { prevStep, values } = this.props
         return(
-            <div className="confirm">
+                <div className="confirm">
                 <h2>You are about to add the following:</h2>
                 <h2>Addiction: {values.otherAddiction === '' ? values.addiction : values.otherAddiction}</h2>
                 <h2>Starting Date: {values.startDate}</h2>
@@ -40,7 +41,7 @@ class Confirm extends React.Component {
     }
 }
 
-Confirm.protoTypes = {
+Confirm.propTypes = {
     createPost: PropTypes.func.isRequired
 }
 
