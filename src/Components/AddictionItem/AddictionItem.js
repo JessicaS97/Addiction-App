@@ -4,15 +4,8 @@ import {connect} from 'react-redux'
 import {fetchPosts} from '../../actions/postActions'
 
 import './AddictionItem.css'
-import { isMappedTypeNode } from 'typescript';
 
 class AddictionItem extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            posts: []
-        }
-    }
 
     componentWillMount() {
         this.props.fetchPosts()
@@ -27,17 +20,13 @@ class AddictionItem extends React.Component {
     render() {
         const postItems = this.props.posts.map(post => (
             <div key={post.id} className="addiction-item">
-                <h3>{post.addiction}</h3>
-                <h2>Start Date: {post.startDate}</h2>
-                <h2>$ {post.savingCost}</h2>
-                <h2>{post.savingTime}/h</h2>
-                <h2>Motive: {post.motive}</h2>
-                
+                <h2>{post.addiction}</h2>
+                <h3>{post.startDate}</h3>
+                <h3>{post.motive}</h3>
             </div>
         ))
         return(
-            <div className="addictions">
-                <h1>Addictions</h1>
+            <div className="addiction-item-list">
                 {postItems}
             </div>
         )

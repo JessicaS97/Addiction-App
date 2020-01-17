@@ -70,6 +70,7 @@ class NewAddiction extends React.Component {
                 )
             case 3:
                 return(
+
                     <div>
                         <MenuBar />
                         <Savings
