@@ -1,24 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-import {createPost} from '../../actions/postActions'
 
 
 class Confirm extends React.Component {
 
     onClick = e => {
-        const { values } = this.props
-
-        const post = {
-            addiction: values.addiction,
-            date: values.startDate,
-            savingCost: values.savingCost,
-            savingTime: values.savingTime, 
-            motive: values.motive
-        }
-
-        this.props.createPost(post)
 
     }
 
@@ -41,8 +27,4 @@ class Confirm extends React.Component {
     }
 }
 
-Confirm.propTypes = {
-    createPost: PropTypes.func.isRequired
-}
-
-export default connect(null, {createPost})(Confirm)
+export default Confirm
