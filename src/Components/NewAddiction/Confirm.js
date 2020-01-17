@@ -1,5 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import {createPost} from '../../actions/postActions'
 
 class Confirm extends React.Component {
 
@@ -14,15 +17,8 @@ class Confirm extends React.Component {
             motive: values.motive
         }
 
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json' 
-            },
-            body: JSON.stringify(post)
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
+        this.props.createPost(post)
+
     }
 
     render() {
@@ -44,4 +40,8 @@ class Confirm extends React.Component {
     }
 }
 
-export default Confirm
+Confirm.protoTypes = {
+    createPost: PropTypes.func.isRequired
+}
+
+export default connect(null, {createPost})(Confirm)
