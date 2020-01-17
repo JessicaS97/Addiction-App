@@ -5,7 +5,6 @@ class Confirm extends React.Component {
 
     onClick = e => {
         const { values } = this.props
-        e.preventDefault()
 
         const post = {
             addiction: values.addiction,
@@ -21,14 +20,6 @@ class Confirm extends React.Component {
         })
         .then(res => res.json())
         .then(data => console.log(data))
-        this.context.router.history.push("/guest-home")
-    }
-
-    reset = () => {
-        const {step} = this.props
-        this.setState({
-            step: 1
-        })
     }
 
     render() {
@@ -41,8 +32,8 @@ class Confirm extends React.Component {
                 <h2>Cost: ${values.savingCost}/day</h2>
                 <h2>Time spent: {values.savingTime}h/day</h2>
                 <h2>Motive: {values.motive}</h2>
-                <Link to="/guest-home">
-                    <button onClick={this.onClick}>Confirm</button>
+                <Link to="/guest-home"
+                onClick={this.onClick}>Confirm
                 </Link>
                 <button onClick={prevStep}>Back</button>
             </div>
