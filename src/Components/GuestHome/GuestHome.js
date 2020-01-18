@@ -3,8 +3,7 @@ import {Link} from 'react-router-dom'
 
 import './GuestHome.css'
 import MenuBar from './../MenuBar/MenuBar'
-import AddictionItem from './../AddictionItem/AddictionItem'
-import store from './../../store'
+import AddictionList from '../AddictionList/AddictionList'
 
 class GuestHome extends React.Component {
     render() {
@@ -17,7 +16,8 @@ class GuestHome extends React.Component {
                         <Link to="/new-addiction">
                             <button>+</button>
                         </Link>
-                        <AddictionItem />
+                        <br></br>
+                        <AddictionList />
                     </div>
                 </div>
             </div>

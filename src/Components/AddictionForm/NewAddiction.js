@@ -1,14 +1,14 @@
 import React from 'react'
 
-import MenuBar from './../MenuBar/MenuBar'
-import AddictionList from './AddictionList'
+import MenuBar from '../MenuBar/MenuBar'
+import AddictionOptions from './AddictionOptions'
 import SoberDate from './SoberDate'
 import Savings from './Savings'
 import Motive from './Motive'
 import Confirm from './Confirm'
 import GuestHome from '../GuestHome/GuestHome'
 
-class NewAddiction extends React.Component {
+class AddictionForm extends React.Component {
     state = {
         step: 1,
         addiction: '',
@@ -46,7 +46,7 @@ class NewAddiction extends React.Component {
                 return(
                         <div>
                         <MenuBar />
-                        <AddictionList 
+                        <AddictionOptions 
                             nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             values={values}
@@ -113,4 +113,4 @@ class NewAddiction extends React.Component {
     }
 }
 
-export default NewAddiction
+export default AddictionForm

@@ -8,7 +8,7 @@ import GuestHome from './Components/GuestHome/GuestHome'
 import Community from './Components/Community/Community'
 import Motivation from './Components/Motivation/Motivation'
 import Support from './Components/Support/Support'
-import NewAddiction from './Components/NewAddiction/NewAddiction'
+import AddictionForm from './Components/AddictionForm/NewAddiction'
 
 
 class App extends React.Component {
@@ -32,7 +32,7 @@ class App extends React.Component {
             <Route path="/guest-community" component={Community} />
             <Route path="/guest-support" component={Support} />
             <Route path="/guest-motivation" component={Motivation} />
-            <Route path="/new-addiction" component={NewAddiction}></Route>
+            <Route path="/new-addiction" component={AddictionForm}></Route>
           </Switch>
         </div>
       </Router>

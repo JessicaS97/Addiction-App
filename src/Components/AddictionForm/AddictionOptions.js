@@ -2,7 +2,7 @@ import React from 'react'
 
 import './NewAddiction.css'
 
-class AddictionList extends React.Component {
+class AddictionOptions extends React.Component {
 
     handleSelect = e => {
         e.preventDefault()
@@ -44,4 +44,4 @@ class AddictionList extends React.Component {
     }
 }
 
-export default AddictionList
+export default AddictionOptions
