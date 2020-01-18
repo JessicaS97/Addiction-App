@@ -4,11 +4,11 @@
     width: 100%;
 }
 
-.addictions-list {
-    margin-left: 120px;
+.all-addictions {
+    width: 800px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     flex-direction: column;
 }
 
@@ -17,12 +17,9 @@
 }
 
 .addictions {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 5px;
     background-color: grey;
-    height: 400px;
+    height: 500px;
 }
 
 .addictions button {

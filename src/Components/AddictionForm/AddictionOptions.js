@@ -19,7 +19,7 @@ class AddictionOptions extends React.Component {
     render() {
         const{ nextStep, values, handleChange } = this.props
         return(
-            <div className="addiction-list">
+            <div className="addiction-options">
                 <h1>Choose Addiction:</h1>
                 <form className="addiction-form">
                 <select onChange={handleChange('addiction')} value={values.addiction}> 

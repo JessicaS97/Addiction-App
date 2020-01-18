@@ -9,7 +9,7 @@ function GuestHome() {
         return(
                 <div className="guest-home">
                         <MenuBar />
-                        <div className="addictions-list">
+                        <div className="all-addictions">
                             <h1>Addictions</h1>
                             <div className="addictions">
                                 <br></br>

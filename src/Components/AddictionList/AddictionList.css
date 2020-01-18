@@ -14,3 +14,14 @@
     font-size: 12px;
     flex-direction: column;
 }
+
+.addiction-grid {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: white;
+}
+
+.addiction-list {
+    display: flex;
+}

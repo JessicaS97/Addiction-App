@@ -6,21 +6,26 @@ import './AddictionList.css'
 
 class AddictionList extends React.Component {
 
+    clearStorage = e => {
+        localStorage.clear()
+        window.location.reload();
+    }
+
     render() {
         const addictions = JSON.parse(localStorage.getItem('addictions'))
         return(
             <div className="addiction-item-list">
-                <h1>Addiction List</h1>
-                <ul>
-                    {addictions.map(el => {
+                <div className="addiction-list">
+                    {addictions !== null && addictions.map(el => {
                         return(
-                            <li>{el.addiction}</li>
+                            <div className="addiction-grid">{el.addiction}</div>
                         )
                     })}
-                </ul>
+                </div>                
                 <Link to="/new-addiction">
                     <button>+</button>
                 </Link>
+                <button onClick={this.clearStorage}>CLEAR ALL</button>
             </div>
         )
     }
