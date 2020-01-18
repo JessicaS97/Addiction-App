@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {AddictionList} from '../AddictionList/AddictionList'
 
 
 class Confirm extends React.Component {

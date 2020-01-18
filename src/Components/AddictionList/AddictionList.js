@@ -1,5 +1,4 @@
-import React, {useState} from 'react'
-import uuid from 'uuid/v1'
+import React from 'react'
 import {Link} from 'react-router-dom'
 
 import './AddictionList.css'
@@ -18,14 +17,23 @@ class AddictionList extends React.Component {
                 <div className="addiction-list">
                     {addictions !== null && addictions.map(el => {
                         return(
-                            <div className="addiction-grid">{el.addiction}</div>
+                            <Link to={{
+                                pathname:'/addiction',
+                                state: {
+                                    values: {...el}
+                                }
+                            }}>
+                                <div className="addiction-grid"><h1>{el.addiction === "Other" ? el.otherAddiction : el.addiction}</h1></div>
+                            </Link>
                         )
                     })}
-                </div>                
-                <Link to="/new-addiction">
-                    <button>+</button>
-                </Link>
-                <button onClick={this.clearStorage}>CLEAR ALL</button>
+                </div>  
+                <div className="buttons">
+                    <Link to="/new-addiction">
+                        <button>+</button>
+                    </Link>
+                    <button onClick={this.clearStorage}>CLEAR ALL</button>
+                </div>              
             </div>
         )
     }

@@ -1,10 +1,10 @@
 .guest-home {
     background-color: rgb(54, 88, 139);
     height: 100vh;
-    width: 100%;
 }
 
 .all-addictions {
+    margin-left: 150px;
     width: 800px;
     display: flex;
     justify-content: center;
@@ -18,8 +18,11 @@
 
 .addictions {
     margin-top: 5px;
+    width: 800px;
     background-color: grey;
+    border-radius: 15px;
     height: 500px;
+    display: flex;
 }
 
 .addictions button {
