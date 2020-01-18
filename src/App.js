@@ -8,7 +8,7 @@ import GuestHome from './Components/GuestHome/GuestHome'
 import Community from './Components/Community/Community'
 import Motivation from './Components/Motivation/Motivation'
 import Support from './Components/Support/Support'
-import AddictionForm from './Components/AddictionForm/NewAddiction'
+import AddictionForm from './Components/AddictionForm/AddictionForm'
 
 
 class App extends React.Component {

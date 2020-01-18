@@ -1,11 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {AddictionList} from '../AddictionList/AddictionList'
 
 
 class Confirm extends React.Component {
 
     onClick = e => {
-
+        const {values} = this.props
+        let existingEntries = JSON.parse(localStorage.getItem('addictions'))
+        if (existingEntries === null) existingEntries = []
+        localStorage.setItem('addictions', JSON.stringify(values))
+        existingEntries.push(values)
+        localStorage.setItem('addictions', JSON.stringify(existingEntries))
     }
 
     render() {

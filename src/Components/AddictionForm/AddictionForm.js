@@ -8,7 +8,8 @@ import Motive from './Motive'
 import Confirm from './Confirm'
 import GuestHome from '../GuestHome/GuestHome'
 
-class AddictionForm extends React.Component {
+class AddictionForm extends React.Component { 
+
     state = {
         step: 1,
         addiction: '',
@@ -38,9 +39,11 @@ class AddictionForm extends React.Component {
     }
 
     render() {
+
         const { step } = this.state
         const {addiction, startDate, savingCost, savingTime, motive, otherAddiction} = this.state
         const values = {addiction, startDate, savingCost, savingTime, motive, otherAddiction}
+        
         switch(step) {
             case 1:
                 return(
@@ -98,6 +101,7 @@ class AddictionForm extends React.Component {
                         <Confirm
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
+                        addAddiction={this.props.addAddiction}
                         values={values}
                         />
                     </div>
