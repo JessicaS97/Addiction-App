@@ -11,9 +11,9 @@ class AddictionOptions extends React.Component {
         })
     }
 
-    continue = e => {
+    continue = (e) => {
         e.preventDefault()
-        this.props.nextStep()
+        alert('Please enter an addiction')
     }
 
     render() {
@@ -33,11 +33,10 @@ class AddictionOptions extends React.Component {
                     <option value="Sugar">Sugar</option>
                     <option>Other</option>
                 </select>
-                <label className="other" 
-                style={{display: values.addiction === 'Other' ? 'block' : 'none'}}>
+                <label className="other" style={{display: values.addiction === 'Other' ? 'block' : 'none'}}>
                     <input type="text" name="other" onChange={handleChange('otherAddiction')} value={values.otherAddiction}/>
                 </label>
-                <button onClick={nextStep}>Next</button>
+                <button onClick={(values.addiction === "") || (values.addiction === 'Other' && values.otherAddiction === "") ? this.continue: nextStep}>Next</button>
                 </form>
             </div>
         )

@@ -12,6 +12,11 @@ class SoberDate extends React.Component {
         this.props.prevStep()
     }
 
+    continue = e => {
+        e.preventDefault()
+        alert('Please enter a starting sober date')
+    }
+
     render() {
         const {nextStep, prevStep, values, handleChange} = this.props
         return(
@@ -20,7 +25,7 @@ class SoberDate extends React.Component {
                 <input type="date" onChange={handleChange('startDate')} value={values.startDate}></input>
                 <button onClick={prevStep}>Back</button>
                 <br></br>
-                <button onClick={nextStep}>Next</button>
+                <button onClick={values.startDate === "" ? this.continue : nextStep}>Next</button>
             </div>
         )
     }
