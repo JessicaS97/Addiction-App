@@ -7,12 +7,11 @@ class AddictionPage extends React.Component {
 
     constructor(props) {
         super(props)
-        const diff = this.calculateTImeDifference()
         this.state = {
-            soberDays: diff.soberDays,
-            soberHours: diff.soberHours,
-            soberMinutes: diff.soberMinutes,
-            soberSeconds: diff.soberSeconds
+            soberDays: '',
+            soberHours: '',
+            soberMinutes: '',
+            soberSeconds: ''
         }
     }
 
@@ -55,15 +54,20 @@ class AddictionPage extends React.Component {
         const {values} = this.props.location.state
         const addiction = values.addiction === 'Other' ? values.otherAddiction : values.addiction
 
-        return(
-            <div>
-                <MenuBar />
-                <h1>{addiction}</h1>
-                <div className="soberDate">
-                    <h2>You've been sober for {this.state.soberDays} days {this.state.soberHours} hours {this.state.soberMinutes} minutes {this.state.soberSeconds} seconds</h2>
+        if (this.state.soberDays === '') {
+            // REPLACE WITH LOADING ICON
+            return null
+        } else {
+            return(
+                <div>
+                    <MenuBar />
+                    <h1>{addiction}</h1>
+                    <div className="soberDate">
+                        <h2>You've been sober for {this.state.soberDays} days {this.state.soberHours} hours {this.state.soberMinutes} minutes {this.state.soberSeconds} seconds</h2>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
 }
 
