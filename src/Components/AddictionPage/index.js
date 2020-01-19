@@ -61,9 +61,28 @@ class AddictionPage extends React.Component {
             return(
                 <div>
                     <MenuBar />
-                    <h1>{addiction}</h1>
-                    <div className="soberDate">
-                        <h2>You've been sober for {this.state.soberDays} days {this.state.soberHours} hours {this.state.soberMinutes} minutes {this.state.soberSeconds} seconds</h2>
+                    <div className="dashboard">
+                        <h1>{addiction}</h1>
+                        <div className="soberDate">
+                            <h2>I've been sober for {this.state.soberDays} days {this.state.soberHours} hours {this.state.soberMinutes} minutes {this.state.soberSeconds} seconds</h2>
+                        </div>
+                        <div className="milestone">
+                            <h2>Last milestone</h2>
+                            <h2>Next milestone</h2>
+                        </div>
+                        <div className="savingCost">
+                            <h2>So far I have saved</h2>
+                            <h3>Money spent on cookies ${values.savingCost * this.state.soberDays}</h3>
+                            <h3>Time spent on cookies {values.savingTime * this.state.soberHours} hours</h3>
+                            <a href="/">View Details</a>
+                        </div>
+                        <div className="motive">
+                            <h2>Why I stay {addiction} free</h2>
+                            <h3>{values.motive}</h3>
+                        </div>
+                        <div className="more-options">
+                            <h2>{addiction} Options</h2>
+                        </div>
                     </div>
                 </div>
             )

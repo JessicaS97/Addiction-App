@@ -24,3 +24,8 @@
     align-items: center;
     flex-direction: column;
 }
+
+.addiction-options {
+    display: flex;
+    flex-direction: column;
+}

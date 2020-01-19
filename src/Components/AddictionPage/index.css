@@ -3,3 +3,23 @@
     justify-content: center;
     align-items: center;
 }
+
+.dashboard {
+    width: 1000px;
+    display: flex;
+    justify-content: wrap;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.soberDate, 
+.milestone,
+.savingCost,
+.motive, 
+.more-options {
+    border: solid 2px grey;
+    width: 400px;
+    margin: 5px;
+    padding: 5px;
+} 
