@@ -16,7 +16,7 @@
 .soberDate, 
 .milestone,
 .savingCost,
-.motive, 
+.dashboard .motive, 
 .more-options {
     border: solid 2px grey;
     width: 400px;

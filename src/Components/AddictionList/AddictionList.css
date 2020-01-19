@@ -16,7 +16,6 @@
 .addiction-grid {
     width: 150px;
     height: 150px;
-    margin: 10px;
     background: white;
     display: flex;
     justify-content: center;
@@ -24,8 +23,20 @@
     border-radius: 15px;
 }
 
+.addiction-grids {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
 .addiction-grid h1 {
     font-size: 25px;
+}
+
+.spacer {
+    background-color: red;
+    width: 200px;
+    height: 200px;
 }
 
 .addiction-list {

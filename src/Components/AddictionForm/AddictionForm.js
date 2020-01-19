@@ -7,6 +7,7 @@ import Savings from './Savings'
 import Motive from './Motive'
 import Confirm from './Confirm'
 import GuestHome from '../GuestHome/GuestHome'
+import uuid from 'uuid/v1'
 
 class AddictionForm extends React.Component { 
 
@@ -17,7 +18,8 @@ class AddictionForm extends React.Component {
         savingCost: '',
         savingTime: '',
         motive: '',
-        otherAddiction: ''
+        otherAddiction: '',
+        id: uuid()
     }
 
     nextStep = () => {
@@ -41,8 +43,8 @@ class AddictionForm extends React.Component {
     render() {
 
         const { step } = this.state
-        const {addiction, startDate, savingCost, savingTime, motive, otherAddiction} = this.state
-        const values = {addiction, startDate, savingCost, savingTime, motive, otherAddiction}
+        const {addiction, startDate, savingCost, savingTime, motive, otherAddiction, id} = this.state
+        const values = {addiction, startDate, savingCost, savingTime, motive, otherAddiction, id}
         
         switch(step) {
             case 1:
