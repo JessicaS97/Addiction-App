@@ -10,16 +10,6 @@ class AddictionList extends React.Component {
         window.location.reload();
     }
 
-    deleteItem = id => {
-        let addictions = JSON.parse(localStorage.getItem('addictions'))
-        addictions = addictions.filter(el => {
-            return el.id === !id
-        })
-        console.log(addictions)
-        localStorage.setItem('addictions', JSON.stringify(addictions))
-        //window.location.reload();
-    }
-
     render() {
         const addictions = JSON.parse(localStorage.getItem('addictions'))
         return(
@@ -39,7 +29,14 @@ class AddictionList extends React.Component {
                                         <h1>{el.addiction === "Other" ? el.otherAddiction : el.addiction}</h1>
                                     </div>
                                 </Link>
-                                <button className="delete=item" onClick={this.deleteItem}>-</button>
+                                <button className="delete=item" onClick={() => {
+                                      var newAddictions = addictions.filter(element => {
+                                        return element.id !== el.id
+                                    })
+                                    console.log(newAddictions)
+                                    localStorage.setItem('addictions', JSON.stringify(newAddictions))
+                                    window.location.reload();
+                                }}>-</button>
 
                             </div>
                         )
