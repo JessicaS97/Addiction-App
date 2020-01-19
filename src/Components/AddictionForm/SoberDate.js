@@ -22,7 +22,7 @@ class SoberDate extends React.Component {
         return(
             <div className="sober-date">
                 <h1>SoberDate</h1>
-                <input type="date" onChange={handleChange('startDate')} value={values.startDate}></input>
+                <input type="datetime-local" onChange={handleChange('startDate')} value={values.startDate}></input>
                 <button onClick={prevStep}>Back</button>
                 <br></br>
                 <button onClick={values.startDate === "" ? this.continue : nextStep}>Next</button>

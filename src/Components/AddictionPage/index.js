@@ -35,7 +35,7 @@ class AddictionPage extends React.Component {
     calculateTImeDifference = () => {
         const {values} = this.props.location.state
         const today = new Date() 
-        const sober = new Date(new Date(values.startDate).setHours(0, 0, 0))   // default sober time starts at 12am on that date
+        const sober = new Date(new Date(values.startDate))   // default sober time starts at 12am on that date
 
         const diff = []
         
@@ -82,6 +82,9 @@ class AddictionPage extends React.Component {
                         </div>
                         <div className="more-options">
                             <h2>{addiction} Options</h2>
+                            <a href="/">Reset</a>
+                            <br></br>
+                            <a href="/">Settings</a>
                         </div>
                     </div>
                 </div>
