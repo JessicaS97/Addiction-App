@@ -2,6 +2,7 @@ import React from 'react'
 
 import MenuBar from '../MenuBar/MenuBar'
 import './index.css'
+import { decodedTextSpanIntersectsWith } from 'typescript'
 
 class AddictionPage extends React.Component {
 
@@ -50,6 +51,19 @@ class AddictionPage extends React.Component {
         return diff
     }
 
+    reset = e => {
+        e.preventDefault()
+        let {values} = this.props.location.state
+        let reset = window.confirm('You sure you want to reset?')
+        let today = new Date()
+        let val = values.startDate
+        if (reset) {
+            this.setState({
+                val: today
+            })
+        }
+    }
+
     render() {
         const {values} = this.props.location.state
         const addiction = values.addiction === 'Other' ? values.otherAddiction : values.addiction
@@ -82,9 +96,9 @@ class AddictionPage extends React.Component {
                         </div>
                         <div className="more-options">
                             <h2>{addiction} Options</h2>
-                            <a href="/">Reset</a>
+                            <button onClick={this.reset}>Reset</button>
                             <br></br>
-                            <a href="/">Settings</a>
+                            <button>Settings</button>
                         </div>
                     </div>
                 </div>

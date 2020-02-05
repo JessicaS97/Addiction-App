@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
                 <Header/ >
                 <div className ="landingPage">
                 <div className="background-img">
-                    <img src={background} alt="meditation"></img>
+                    <img src={background} alt="background"></img>
                 </div>
                 <p>Journey to good habits</p>
                 <br></br>

@@ -18,7 +18,6 @@ class AddictionList extends React.Component {
                     {addictions !== null && addictions.map(el => {
                         return(
                             <div className="addiction-grids">
-
                                 <Link to={{
                                     pathname:'/addiction',
                                     state: {
@@ -33,7 +32,6 @@ class AddictionList extends React.Component {
                                       var newAddictions = addictions.filter(element => {
                                         return element.id !== el.id
                                     })
-                                    console.log(newAddictions)
                                     localStorage.setItem('addictions', JSON.stringify(newAddictions))
                                     window.location.reload();
                                 }}>-</button>
