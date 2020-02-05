@@ -7,7 +7,6 @@ Site Is Built From Scratch.
 * CSS - Styling
 * npm - Package Manager
 * React.js - JavaScript framework used
-* Redux - State Management 
 * VSCode - Text Editor
 
 ## Credits
