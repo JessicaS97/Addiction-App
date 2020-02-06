@@ -2,7 +2,6 @@ import React from 'react'
 
 import MenuBar from '../MenuBar/MenuBar'
 import './index.css'
-import { decodedTextSpanIntersectsWith } from 'typescript'
 
 class AddictionPage extends React.Component {
 
