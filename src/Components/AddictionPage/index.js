@@ -51,14 +51,15 @@ class AddictionPage extends React.Component {
     }
 
     reset = e => {
-        e.preventDefault()
         let {values} = this.props.location.state
         let reset = window.confirm('You sure you want to reset?')
         let today = new Date()
         let val = values.startDate
         if (reset) {
             this.setState({
-                val: today
+                soberHours: today.getHours(),
+                soberMinutes: today.getMinutes(),
+                soberSeconds: today.getSeconds()
             })
         }
     }
