@@ -22,10 +22,6 @@ class AddictionForm extends React.Component {
         id: uuid()
     }
 
-    // reset() = e => {
-    //     e.prevS
-    // }
-
     nextStep = () => {
         const { step } = this.state
         this.setState({

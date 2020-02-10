@@ -83,7 +83,8 @@ class AddictionPage extends React.Component {
                             <h2>So far I have saved</h2>
                             <h3>Money spent on cookies ${values.savingCost * this.state.soberDays}</h3>
                             <h3>Time spent on cookies {values.savingTime * this.state.soberHours} hours</h3>
-                            <a href="/">View Details</a>
+                            
+                            <a href="/spendings-details">View Details</a>
                         </div>
                         <div className="motive"  style={{display: values.motive === '' ? 'none' : 'block'}}>
                             <h2>Why I stay {addiction} free</h2>
