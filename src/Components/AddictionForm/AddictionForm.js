@@ -29,6 +29,12 @@ class AddictionForm extends React.Component {
         })
     }
 
+    modifyMotive = item => {
+        this.setState({
+            motive:item
+        })
+    }
+
     prevStep = () => {
         const { step } = this.state
         this.setState({
@@ -45,6 +51,7 @@ class AddictionForm extends React.Component {
         const { step } = this.state
         const {addiction, startDate, savingCost, savingTime, motive, otherAddiction, id} = this.state
         const values = {addiction, startDate, savingCost, savingTime, motive, otherAddiction, id}
+        const modifyMotive = this.modifyMotive;
         
         switch(step) {
             case 1:

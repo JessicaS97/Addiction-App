@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import MenuBar from '../MenuBar/MenuBar'
 import './index.css'
@@ -59,6 +60,26 @@ class AddictionPage extends React.Component {
         }
     }
 
+    changeMotive = () => {
+        let {values} = this.props.location.state
+        let motiveText = document.getElementsByClassName("motive-text")[0];
+        let button = document.getElementsByClassName("changeMotive")[0];
+        let newMotive
+        button.innerHTML = "Confirm"
+        motiveText.innerHTML = ""
+        let textInput = document.createElement("input");
+        textInput.setAttribute("type", "text");
+        motiveText.appendChild(textInput);
+
+        motiveText.addEventListener("change", e => {
+            newMotive = e.target.value
+        })
+        button.addEventListener("click", () => {
+            motiveText.innerHTML = values.motive
+            button.innerHTML = "Change"
+        })
+    }
+
     render() {
         const {values} = this.props.location.state
         const addiction = values.addiction === 'Other' ? values.otherAddiction : values.addiction
@@ -83,12 +104,12 @@ class AddictionPage extends React.Component {
                             <h2>So far I have saved</h2>
                             <h3>Money spent on cookies ${values.savingCost * this.state.soberDays}</h3>
                             <h3>Time spent on cookies {values.savingTime * this.state.soberHours} hours</h3>
-                            
-                            <a href="/spendings-details">View Details</a>
+                            <Link to="/spendings-details">View Details</Link>
                         </div>
                         <div className="motive"  style={{display: values.motive === '' ? 'none' : 'block'}}>
                             <h2>Why I stay {addiction} free</h2>
-                            <h3>{values.motive}</h3>
+                            <h3 className="motive-text">{values.motive}</h3>
+                            <button onClick={this.changeMotive} className="changeMotive">Change</button>
                         </div>
                         <div className="more-options">
                             <h2>{addiction} Options</h2>

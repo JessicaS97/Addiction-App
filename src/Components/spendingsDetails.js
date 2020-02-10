@@ -7,9 +7,11 @@ class SpendingsDetails extends Component {
                 <h2>Spendings Details</h2>
                 <div className="spending-money">
                     <h4>Money</h4>
+                    <h2>`$ ${}`</h2>
                 </div>
                 <div className="spending-time">
                     <h4>Time</h4>
+                    <h2>`${}`</h2>
                 </div>
             </div>
         )
