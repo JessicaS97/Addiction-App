@@ -8,7 +8,8 @@ class Support extends React.Component {
         return(
             <div className="support">
                 <MenuBar />
-                <h1>Support</h1>
+                <h1>FAQs</h1>
+                <h5>What is the idea of Addiction?</h5>
             </div>
         )
     }

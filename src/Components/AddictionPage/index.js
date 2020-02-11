@@ -113,7 +113,6 @@ class AddictionPage extends React.Component {
                             <h2>So far I have saved</h2>
                             <h3>Money spent on cookies ${values.savingCost * this.state.soberDays}</h3>
                             <h3>Time spent on cookies {values.savingTime * this.state.soberHours} hours</h3>
-                            <Link to="/spendings-details">View Details</Link>
                         </div>
                         <div className="motive"  style={{display: values.motive === '' ? 'none' : 'block'}}>
                             <h2>Why I stay {addiction} free</h2>
@@ -122,9 +121,11 @@ class AddictionPage extends React.Component {
                         </div>
                         <div className="more-options">
                             <h2>{addiction} Options</h2>
-                            <button onClick={this.reset}>Reset</button>
-                            <br></br>
-                            <button>Settings</button>
+                            <div className="buttons-addictionpage">
+                                <button onClick={this.reset}>Reset</button>
+                                <br></br>
+                                <button>Settings</button>
+                            </div>
                         </div>
                     </div>
                 </div>
