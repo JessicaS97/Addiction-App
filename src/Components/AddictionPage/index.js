@@ -64,8 +64,13 @@ class AddictionPage extends React.Component {
         let {values} = this.props.location.state
         let motiveText = document.getElementsByClassName("motive-text")[0];
         let button = document.getElementsByClassName("changeMotive")[0];
+        let motiveGrid = document.getElementsByClassName("motive")[0];
+        let oldButton = button
+        button.style.display = 'none'
+        let newButton = document.createElement("button")
+        newButton.innerHTML = "Confirm"
+        motiveGrid.appendChild(newButton)
         let newMotive
-        button.innerHTML = "Confirm"
         motiveText.innerHTML = ""
         let textInput = document.createElement("input");
         textInput.setAttribute("type", "text");
@@ -74,10 +79,14 @@ class AddictionPage extends React.Component {
         motiveText.addEventListener("change", e => {
             newMotive = e.target.value
         })
-        button.addEventListener("click", () => {
-            motiveText.innerHTML = values.motive
-            button.innerHTML = "Change"
+        
+        newButton.addEventListener("click", () => {
+            motiveText.removeChild(textInput)
+            motiveText.innerHTML = newMotive
+            newButton.style.display = 'none'
+            oldButton.style.display = 'block'
         })
+        
     }
 
     render() {
