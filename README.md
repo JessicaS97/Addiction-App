@@ -8,6 +8,7 @@ Site Is Built From Scratch.
 ## Site is Live At:
 
 **Project Start Date:** 13/01/2020
+
 **Project Status:** paused
 
 **The Problem:** Everyone has some sort of bad habit which we are trying to break from. Whether is being addicted to some drinks like Alcohol or Coffee, or other chemicals like sugar or salt. Sometimes these bad habits are difficult to break because we lose track of time, of our progress and staying focused and motivated.
